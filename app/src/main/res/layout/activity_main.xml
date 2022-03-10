@@ -1,21 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/mapNearBy"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@+id/rvToolbar"
-        android:layout_weight="1" />
-
-    <Button
-        android:id="@+id/btnGetDirection"
-        android:text="Get Direction"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground" />
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            xmlns:Card_View="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            Card_View:cardCornerRadius="5dp"
+            Card_View:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/et_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:hint="Enter source Location"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/et_destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:hint="Enter destination Location"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/bt_track"
+                    android:text="display track"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="16dp"/>
+
+               </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
 </LinearLayout>
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/mapNearBy"-->
+    <!--        android:name="com.google.android.gms.maps.MapFragment"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_below="@+id/rvToolbar"-->
+    <!--        android:layout_weight="1" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnGetDirection"-->
+    <!--        android:text="Get Direction"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="?attr/selectableItemBackground" />-->
+    <!--</LinearLayout>-->
